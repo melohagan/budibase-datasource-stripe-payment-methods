@@ -22,6 +22,16 @@ class CustomIntegration implements IntegrationBase {
     return await this.stripe.paymentMethods.retrieve(query.id)
   }
 
+  async list(query: { customerId: string; extra: { [key: string]: string } }) {
+    let params: any = {
+      type: query.extra.type
+    }
+    if (query.customerId) {
+      params['customer'] = query.customerId
+    }
+    return await this.stripe.paymentMethods.list(params)
+  }
+
   async update(query: { id: string, body: string; extra: { [key: string]: string } }) {
     return await this.stripe.paymentMethods.update(query.id, JSON.parse(query.body))
   }

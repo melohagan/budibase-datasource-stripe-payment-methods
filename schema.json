@@ -26,6 +26,16 @@
           }
         }
       },
+      "list": {
+        "type": "fields",
+        "fields": {
+          "customerId": {
+            "display": "Customer ID",
+            "type": "string",
+            "required": false
+          }
+        }
+      },
       "update": {
         "type": "fields",
         "fields": {
@@ -87,21 +97,35 @@
             "us_bank_account",
             "wechat_pay"
           ],
-          "delete": [
-            "Subscriptions",
-            "Subscription Items",
-            "Subscription Schedules"
-          ],
           "list": [
-            "Subscriptions",
-            "Subscription Items",
-            "Subscription Schedules"
-          ],
-          "searchSubscriptions": [
-            "Subscriptions"
-          ],
-          "releaseSchedule": [
-            "Subscription Schedules"
+            "acss_debit",
+            "affirm",
+            "afterpay_clearpay",
+            "alipay",
+            "au_becs_debit",
+            "bacs_debit",
+            "bancontact",
+            "blik",
+            "boleto",
+            "card",
+            "customer_balance",
+            "eps",
+            "fpx",
+            "giropay",
+            "grabpay",
+            "ideal",
+            "klarna",
+            "konbini",
+            "link",
+            "oxxo",
+            "p24",
+            "paynow",
+            "pix",
+            "promptpay",
+            "sepa_debit",
+            "sofort",
+            "us_bank_account",
+            "wechat_pay"
           ]
         }
       }
