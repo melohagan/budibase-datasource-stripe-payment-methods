@@ -87,16 +87,6 @@
             "us_bank_account",
             "wechat_pay"
           ],
-          "read": [
-            "Subscriptions",
-            "Subscription Items",
-            "Subscription Schedules"
-          ],
-          "update": [
-            "Subscriptions",
-            "Subscription Items",
-            "Subscription Schedules"
-          ],
           "delete": [
             "Subscriptions",
             "Subscription Items",

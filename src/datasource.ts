@@ -15,20 +15,19 @@ class CustomIntegration implements IntegrationBase {
       type: query.extra.type
     }
     params[query.extra.type] = query.json
-    console.log("PARAMS ", params)
     return await this.stripe.paymentMethods.create(params)
   }
 
   async read(query: { id: string; extra: { [key: string]: string } }) {
-    
+    return await this.stripe.paymentMethods.retrieve(query.id)
   }
 
   async update(query: { id: string, body: string; extra: { [key: string]: string } }) {
-    
+    return await this.stripe.paymentMethods.update(query.id, JSON.parse(query.body))
   }
 
   async delete(query: { id: string; extra: { [key: string]: string } }) {
-    
+    //return await this.stripe.paymentMethods
   }
 }
 
