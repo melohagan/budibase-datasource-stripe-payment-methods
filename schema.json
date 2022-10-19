@@ -50,11 +50,26 @@
           }
         }
       },
-      "delete": {
+      "attach": {
         "type": "fields",
         "fields": {
-          "id": {
-            "display": "ID",
+          "paymentMethodId": {
+            "display": "Payment Method ID",
+            "type": "string",
+            "required": true
+          },
+          "customerId": {
+            "display": "Customer ID",
+            "type": "string",
+            "required": true
+          }
+        }
+      },
+      "detach": {
+        "type": "fields",
+        "fields": {
+          "paymentMethodId": {
+            "display": "Payment Method ID",
             "type": "string",
             "required": true
           }

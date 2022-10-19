@@ -36,8 +36,14 @@ class CustomIntegration implements IntegrationBase {
     return await this.stripe.paymentMethods.update(query.id, JSON.parse(query.body))
   }
 
-  async delete(query: { id: string; extra: { [key: string]: string } }) {
-    //return await this.stripe.paymentMethods
+  async attach(query: { paymentMethodId: string; customerId: string; }) {
+    return await this.stripe.paymentMethods.attach(query.paymentMethodId, {
+      "customer": query.customerId
+    })
+  }
+
+  async detach(query: { paymentMethodId: string; }) {
+    return await this.stripe.paymentMethods.detach(query.paymentMethodId)
   }
 }
 
