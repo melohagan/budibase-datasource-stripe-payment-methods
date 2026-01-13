@@ -1,15 +1,19 @@
-# Stripe payment method
+# Deprecated
+
+Use the official Stripe [REST Template](https://docs.budibase.com/docs/rest-templates) instead!
+
+### Stripe payment method
 
 Perform CRUD operations for Stripe Payment Methods
 
 Official docs: https://stripe.com/docs/api/payment_methods?lang=node
 
-# Description
+### Description
 Perform CRUD operations on Stripe subscriptions, including items and schedules
 
 Find out more about [Budibase](https://github.com/Budibase/budibase).
 
-## Instructions
+#### Instructions
 
 To build your new  plugin run the following in your Budibase CLI:
 ```
